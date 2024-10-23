@@ -18,9 +18,9 @@ int main() {
 
  // maintain a 3.14 radian hold
     cmd.id   = 0;
-    cmd.q = 3.14*6.33; // set at 3.14 radians times magic number reducer
-    cmd.kd = 0.005; // 0.01 or lower, backdrive
-    cmd.kp = 0.1; // 0.1 or lower, backdrive
+    cmd.q = 3.14; // set at 3.14 radians times magic number reducer
+    cmd.kd = 0.005; // 0.01 or lower, backdrive (0-1)
+    cmd.kp = 0.5; // 0.1 or lower, backdrive (0-1)
     cmd.tau = 0; // feedforward
     cmd.dq = 0; // velocity is zero
 
