@@ -29,6 +29,14 @@ target_link_libraries(example_goM8010_6_motor ${EXTRA_LIBS})
 add_executable(changeID example/changeID.cpp)
 target_link_libraries(changeID ${EXTRA_LIBS})
 
+# below is my own stuff
+add_executable(test1 personaltests/test1.cpp)
+target_link_libraries(test1 ${EXTRA_LIBS})
+
+add_executable(test2 personaltests/test2.cpp)
+target_link_libraries(test2 ${EXTRA_LIBS})
+
+# above is my own stuff
 set(LIBRARY_OUTPUT_PATH "../lib")
 add_subdirectory(thirdparty/pybind11)
 pybind11_add_module(unitree_actuator_sdk thirdparty/python_wrapper/wrapper.cpp)
