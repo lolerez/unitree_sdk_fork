@@ -21,8 +21,8 @@ int main() {
     cmd.tau = 0.0; // torque
     cmd.dq = 0.0; // speed
     cmd.q = 0; // postiion
-    cmd.kp = 0,0 // stiffness
-    cmd.kd = 0.02 // daming
+    cmd.kp = 0.0; // stiffness
+    cmd.kd = 0.02; // daming
     serial.sendRecv(&cmd,&data);
 
     std::cout <<  std::endl;
