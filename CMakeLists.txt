@@ -45,8 +45,6 @@ target_link_libraries(test4 ${EXTRA_LIBS})
 add_executable(test5 personaltests/test5.cpp)
 target_link_libraries(test5 ${EXTRA_LIBS})
 
-add_executable(test6 personaltests/test6.cpp)
-target_link_libraries(test6 ${EXTRA_LIBS})
 
 
 
