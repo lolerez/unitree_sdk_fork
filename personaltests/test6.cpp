@@ -25,7 +25,7 @@ void sweepMotorPosition(int id, double duration_seconds, double freq_hz) {
         cmd.dq = 0;              // Velocity set to 0 (pure position control)
 
         // Call the motor's control function here (or publish ROS message)
-        sendMotorCommand(cmd);
+        serial.sendRecv(&cmd,&data);
 
         // Sleep to maintain the desired frequency
         std::this_thread::sleep_for(std::chrono::milliseconds((int)(1000.0 / freq_hz)));
