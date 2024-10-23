@@ -16,13 +16,13 @@ int main() {
     cmd.mode = queryMotorMode(MotorType::GO_M8010_6,MotorMode::FOC);
 
 
- // constant yspeed
+  // maintain a 3.14 radian hold
     cmd.id   = 0;
-    cmd.q = 0; // set at 3.14 radians times magic number reducer
-    cmd.kd = 0.01; // 0.01 or lower, backdrive (0-1)
-    cmd.kp = 0.0; // 0.1 or lower, backdrive (0-1)
+    cmd.q = 3.14; // set at 3.14 radians times magic number reducer
+    cmd.kd = 0.005; // 0.01 or lower, backdrive (0-1)
+    cmd.kp = .5; // 0.1 or lower, backdrive (0-1)
     cmd.tau = 0; // feedforward
-    cmd.dq = 6.28; // velocity is zero
+    cmd.dq = 0; // velocity is zero
 
     serial.sendRecv(&cmd,&data);
 
