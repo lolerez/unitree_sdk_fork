@@ -39,6 +39,21 @@ target_link_libraries(test2 ${EXTRA_LIBS})
 add_executable(test3 personaltests/test3.cpp)
 target_link_libraries(test3 ${EXTRA_LIBS})
 
+add_executable(test4 personaltests/test4.cpp)
+target_link_libraries(test4 ${EXTRA_LIBS})
+
+add_executable(test5 personaltests/test5.cpp)
+target_link_libraries(test5 ${EXTRA_LIBS})
+
+add_executable(test6 personaltests/test6.cpp)
+target_link_libraries(test6 ${EXTRA_LIBS})
+
+
+
+
+
+
+
 # above is my own stuff
 set(LIBRARY_OUTPUT_PATH "../lib")
 add_subdirectory(thirdparty/pybind11)

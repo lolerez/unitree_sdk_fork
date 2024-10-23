@@ -16,11 +16,11 @@ int main() {
     cmd.mode = queryMotorMode(MotorType::GO_M8010_6,MotorMode::FOC);
 
 
- // zero torque mode
+ // steroid mode
     cmd.id   = 0;
-    cmd.q = 0; // set at 3.14 radians times magic number reducer
-    cmd.kd = 0; // 0.01 or lower, backdrive (0-1)
-    cmd.kp = 0.0; // 0.1 or lower, backdrive (0-1)
+    cmd.q = 1.57; // set at 3.14 radians times magic number reducer
+    cmd.kd = 1; // 0.01 or lower, backdrive (0-1)
+    cmd.kp = 1; // 0.1 or lower, backdrive (0-1)
     cmd.tau = 0; // feedforward
     cmd.dq = 0; // velocity is zero
 

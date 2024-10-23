@@ -22,7 +22,7 @@ int main() {
     cmd.dq = 0.0; // speed
     cmd.q = 0; // postiion
     cmd.kp = 0.0; // stiffness
-    cmd.kd = 0.02; // daming
+    cmd.kd = 0.2; // daming
     serial.sendRecv(&cmd,&data);
 
     std::cout <<  std::endl;
