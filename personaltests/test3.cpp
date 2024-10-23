@@ -16,14 +16,13 @@ int main() {
     cmd.mode = queryMotorMode(MotorType::GO_M8010_6,MotorMode::FOC);
 
 
- // maintain a 3.14 radian hold
+    // torque mode (arm chopper, not max tho)
     cmd.id   = 0;
-    cmd.q = 3.14*6.33 // set at 3.14 radians times magic number reducer
-    cmd.kd = 0.005 // 0.01 or lower, backdrive
-    cmd.kp = 0.1 // 0.1 or lower, backdrive
-    cmd.tau = 0 // feedforward
-    cmd.dq = 0 // velocity is zero
-
+    cmd.tau = 0.05; // torque
+    cmd.dq = 0.0; // speed
+    cmd.q = 0; // postiion
+    cmd.kp = 0,0 // stiffness
+    cmd.kd = 0.00 // daming
     serial.sendRecv(&cmd,&data);
 
     std::cout <<  std::endl;

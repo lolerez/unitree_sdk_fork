@@ -16,13 +16,13 @@ int main() {
     cmd.mode = queryMotorMode(MotorType::GO_M8010_6,MotorMode::FOC);
 
 
-
+    // damping mode
     cmd.id   = 0;
-    cmd.kp   = 0.0;
-    cmd.kd   = 0.01;
-    cmd.q    = 0.0;
-    cmd.dq   = -6.28*queryGearRatio(MotorType::GO_M8010_6);
-    cmd.tau  = 0.0;
+    cmd.tau = 0.0; // torque
+    cmd.dq = 0.0; // speed
+    cmd.q = 0; // postiion
+    cmd.kp = 0,0 // stiffness
+    cmd.kd = 0.02 // daming
     serial.sendRecv(&cmd,&data);
 
     std::cout <<  std::endl;
