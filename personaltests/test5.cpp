@@ -19,8 +19,8 @@ int main() {
  // steroid mode
     cmd.id   = 0;
     cmd.q = 1.57; // set at 3.14 radians times magic number reducer
-    cmd.kd = 1; // 0.01 or lower, backdrive (0-1)
-    cmd.kp = 1; // 0.1 or lower, backdrive (0-1)
+    cmd.kd = .02; // 0.01 or lower, backdrive (0-1)
+    cmd.kp = .9; // 0.1 or lower, backdrive (0-1)
     cmd.tau = 0; // feedforward
     cmd.dq = 0; // velocity is zero
 

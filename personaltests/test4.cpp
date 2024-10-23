@@ -19,10 +19,10 @@ int main() {
  // constant yspeed
     cmd.id   = 0;
     cmd.q = 0; // set at 3.14 radians times magic number reducer
-    cmd.kd = 0.0; // 0.01 or lower, backdrive (0-1)
+    cmd.kd = 0.01; // 0.01 or lower, backdrive (0-1)
     cmd.kp = 0.0; // 0.1 or lower, backdrive (0-1)
     cmd.tau = 0; // feedforward
-    cmd.dq = 2; // velocity is zero
+    cmd.dq = 6.28; // velocity is zero
 
     serial.sendRecv(&cmd,&data);
 
